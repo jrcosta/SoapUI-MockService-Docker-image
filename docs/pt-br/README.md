@@ -10,7 +10,7 @@ Voê pode executar o mock-service container interativamente com o seguinte coman
 
         $ docker run -P -it --rm -e MOCK_SERVICE_NAME=BLZ-SOAP11-MockService  <<image-id>>
 
-        $ docker run -p 8080:8080 -it --rm \
+        $ docker run -p 8991:8991 -it --rm \
             -e MOCK_SERVICE_NAME=BLZ-SOAP11-MockService \
             -e MOCK_SERVICE_PATH=/BLZMockService \
             -e PROJECT=/home/soapui/soapui-prj/default-soapui-project.xml \
@@ -33,7 +33,7 @@ SoapUI project XML armazenado localmente. O exemplo a seguir demonstra isso. O S
         $ wget https://raw.githubusercontent.com/fbascheper/SoapUI-MockService-Docker-image/master/soapui-prj/default-soapui-project.xml
 
         $ docker run -P -it --rm \
-            -p 8080:8080 \
+            -p 8991:8991 \
             -v "$HOME/soapui-test-project:/home/soapui/soapui-prj/" \
             -e MOCK_SERVICE_NAME="BLZ-SOAP11-MockService" \
             -e PROJECT=/home/soapui/soapui-prj/default-soapui-project.xml \
@@ -41,7 +41,7 @@ SoapUI project XML armazenado localmente. O exemplo a seguir demonstra isso. O S
              <<image-id>>
 
 
-Se tudo deu certo, você agora deve estar apto a acessar o WSDL no endereço ``http://localhost:8080/BLZ-SOAP11-MockService?WSDL``
+Se tudo deu certo, você agora deve estar apto a acessar o WSDL no endereço ``http://localhost:8991/BLZ-SOAP11-MockService?WSDL``
 
 
 ## Variáveis de ambiente suportadas

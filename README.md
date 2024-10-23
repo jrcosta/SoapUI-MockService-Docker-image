@@ -32,7 +32,7 @@ in a newly created ``soapui-test-project`` directory of the ``$HOME`` directory.
         $ wget https://raw.githubusercontent.com/fbascheper/SoapUI-MockService-Docker-image/master/soapui-prj/default-soapui-project.xml
 
         $ docker run -P -it --rm \
-            -p 8080:8080 \
+            -p 8991:8991 \
             -v "$HOME/soapui-test-project:/home/soapui/soapui-prj/" \
             -e MOCK_SERVICE_NAME="BLZ-SOAP11-MockService" \
             -e PROJECT=/home/soapui/soapui-prj/default-soapui-project.xml \
@@ -40,7 +40,7 @@ in a newly created ``soapui-test-project`` directory of the ``$HOME`` directory.
              <<image-id>>
 
 
-If all goes well, you should now be able to access the WSDL at the location ``http://localhost:8080/BLZ-SOAP11-MockService?WSDL``
+If all goes well, you should now be able to access the WSDL at the location ``http://localhost:8991/BLZ-SOAP11-MockService?WSDL``
 
 
 ## Supported environment variables
